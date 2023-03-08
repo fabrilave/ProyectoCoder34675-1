@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+
+{% block contenido_cambia %}
+    <h1>El contenido ha sido modificado</h1>
+    {% if cursos %}
+        {% for curso in cursos %}
+            <p>curso: {{ curso.nombre }}</p>
+            <p>camada: {{ curso.camada }}</p>
+        {% endfor %}
+    {% else %}
+        <h1>No hay cursos en el momento</h1>
+    {% endif %}
+
+{% endblock %}

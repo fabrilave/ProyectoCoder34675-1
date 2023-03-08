@@ -20,10 +20,19 @@
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href="#!">Start Bootstrap</a>
+                <a class="navbar-brand" href="{% url 'AppCoderCursos' %}">Cursos</a>
+                <a class="navbar-brand" href="{% url 'AppCoderEstudiantes' %}">Estudiantes</a>
+                <a class="navbar-brand" href="https://facebook.com">Profesores</a>
+
+
                 <a class="btn btn-primary" href="#signup">Sign Up</a>
             </div>
         </nav>
+        <!-- Body -->
+        {% block contenido_cambia %}
+            <h1>No se encuentra contenido disponible</h1>
+        {% endblock %}
+
         <!-- Masthead-->
         <header class="masthead">
             <div class="container position-relative">
