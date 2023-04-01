@@ -2,17 +2,20 @@ from django import forms
 
 from AppCoder.models import Curso, Estudiantes, Profesor
 
-class CursoForms(forms.ModelForm):
+
+class CursoForm(forms.ModelForm):
 
     class Meta:
         model = Curso
         fields = "__all__"
+
 
 class EstudianteForm(forms.ModelForm):
 
     class Meta:
         model = Estudiantes
         fields = "__all__"
+
 
 class ProfesorForm(forms.ModelForm):
 
@@ -22,5 +25,5 @@ class ProfesorForm(forms.ModelForm):
 
 
 class BusquedaCursoForm(forms.Form):
-    
+
     nombre = forms.CharField(min_length=3, max_length=40)
